@@ -1,4 +1,4 @@
-package week04.practice2.source02;
+package week04.practice.source07;
 
 public class TV {
 	private boolean power;
