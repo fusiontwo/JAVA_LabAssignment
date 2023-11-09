@@ -13,7 +13,29 @@ public class TestMain {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("202112439 최예름");
-
+		
+		/* HashSet 사용하기 */
+		// 빈출단어
+		HashSet<Word> set1 = new HashSet<>();
+		set1.add(new Word("red1", "빨강색1"));
+		set1.add(new Word("red2", "빨강색2"));
+		set1.add(new Word("red3", "빨강색3"));
+		set1.add(new Word("red4", "빨강색4"));
+		set1.add(new Word("red5", "빨강색5"));
+		
+		// 오답노트
+		HashSet<Word> set2 = new HashSet<>();
+		set2.add(new Word("red1", "빨강색1"));
+		set2.add(new Word("red7", "빨강색7"));
+		set2.add(new Word("red3", "빨강색3"));
+		set2.add(new Word("red8", "빨강색8"));
+		
+		HashSet<Word> set3 = new HashSet<>(set1);
+		set3.retainAll(set2);
+		System.out.println(set3);
+		
+		
+		
 		/* ArrayList와 LinkedList 시간 비교하기*/
 //		ArrayList<Integer> arrlist = new ArrayList<>();		
 //		LinkedList<Integer> linkedlist = new LinkedList<>();
@@ -79,12 +101,12 @@ public class TestMain {
 //		System.out.println(list);
 		
 		
-//		Vector<Word> list = new Vector<>();
-//		list.add(new Word("red1", "빨강색1"));
-//		list.add(new Word("red2", "빨강색2"));
-//		list.add(new Word("red3", "빨강색3"));
-//		list.add(new Word("red4", "빨강색4"));
-//		list.add(new Word("red5", "빨강색5"));
+		Vector<Word> list = new Vector<>();
+		list.add(new Word("red1", "빨강색1"));
+		list.add(new Word("red2", "빨강색2"));
+		list.add(new Word("red3", "빨강색3"));
+		list.add(new Word("red4", "빨강색4"));
+		list.add(new Word("red5", "빨강색5"));
 		
 //		list.add(new Word("red1", "빨강색1"));
 //		list.add(new Word("red2", "빨강색2"));
@@ -107,28 +129,28 @@ public class TestMain {
 
 		
 		/* equals 오버라이딩 해서 사용하기 */
-		while(list.contains(new Word("red4","빨강색4"))) {
-			int idx = list.indexOf(new Word("red4", "빨강색4"));
-			list.remove(idx);
-		}
-		
-		list.remove(new Word("red4", "빨강색4"));
-		
-		
-		Word w = list.get(1);
-		w.setKor("빨강2");
-		list.remove(1);
-		
-		System.out.println(list);
-		System.out.println(w);
-		
-		
-		List<Word> arr = list.subList(1, 4);
-		arr.get(0).setKor("빨강2");
-		arr.clear();  // arr의 요소를 지웠는데 원본 데이터도 지워짐.
-		
-		System.out.println(list);
-		System.out.println(arr);
+//		while(list.contains(new Word("red4","빨강색4"))) {
+//			int idx = list.indexOf(new Word("red4", "빨강색4"));
+//			list.remove(idx);
+//		}
+//		
+//		list.remove(new Word("red4", "빨강색4"));
+//		
+//		
+//		Word w = list.get(1);
+//		w.setKor("빨강2");
+//		list.remove(1);
+//		
+//		System.out.println(list);
+//		System.out.println(w);
+//		
+//		
+//		List<Word> arr = list.subList(1, 4);
+//		arr.get(0).setKor("빨강2");
+//		arr.clear();  // arr의 요소를 지웠는데 원본 데이터도 지워짐.
+//		
+//		System.out.println(list);
+//		System.out.println(arr);
 		
 		/* ArrayList */
 //		ArrayList<Word> list2 = new ArrayList<>();
